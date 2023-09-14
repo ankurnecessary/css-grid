@@ -1,3 +1,7 @@
-.container {}
+.container {
+    display: grid;
+}
 
-.inline-container {}
+.inline-container {
+    display: inline-grid;
+}
