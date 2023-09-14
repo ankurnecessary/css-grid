@@ -3,29 +3,49 @@
 }
 
 .two-column-container {
+    /*
+    If we will pass only one 200px here then the grid will have only one column of 200px width
 
+    This grid will have 2 columns
+    */
+    grid-template-columns: 200px 200px;
 }
 
 .just-rows-container {
+    /*
+        Since we have 4 rows we provided for figures in grid-template-rows. If we provide less no. of figures then rest of them will not resize their height to 100px.
 
+        This grid will have 4 rows
+    */
+    grid-template-rows: 100px 100px 100px 100px;
 }
 
 .two-by-two-container {
-
+    /* This grid will have 2 columns and 2 rows */
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px;
 }
 
 .four-by-one-container {
-
+    /* This grid will have only 4 columns and 1 row */
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: 100px;
 }
 
 .just-columns-container {
-
+    /* This grid will have 4 columns and a row of height of the grid-item because we don't have grid-template-rows defined */
+    grid-template-columns: 200px 200px 200px 200px;
 }
 
 .unnecessary-columns-container {
-
+    /* Now we have only 4 <div>s inside the grid container. So, grid will have the space of 5th column but we don't have any grid-item for the 5th column */
+    grid-template-columns: 200px 200px 200px 200px 200px;
 }
 
 .unnecessary-rows-container {
-    
+    /* This CSS will give height of 500px to the grid container which will have 2 columns and 3 rows. But since we have only 4 <div>s 3rd grid row will be empty*/
+    height: 500px;
+    margin-bottom: 150px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px 200px;
 }
