@@ -1,3 +1,6 @@
 .container {
     display: grid;
+
+    /* "grid: ;" property is the shortcut for "grid-template-rows: ;" and "grid-template-columns: ;" */
+    grid: 100px 100px / 200px 200px;
 }
