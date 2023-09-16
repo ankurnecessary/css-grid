@@ -6,17 +6,42 @@
     grid-template-columns: 200px 300px;
 }
 
+/* A */
 .two-fixed-row-container {
-    grid-template-columns: 200px 200px;
     grid-template-rows: 100px 200px;
+    grid-template-columns: 200px 200px;
 }
 
+/* B */
+/* .two-fixed-row-container {
+    grid: 100px 200px / 200px 200px;
+} */
+
+/* A === B -> true */
+
+/* C */
 .two-percentage-column-container {
     grid-template-columns: 40% 50%;
 }
 
+/* D */
+/* .two-percentage-column-container {
+    grid: auto auto / 40% 50%;
+} */
+
+/* C === D -> true */
+
+/* E */
 .two-percentage-row-container {
     height: 600px;
     grid-template-rows: 30% 50%;
     grid-template-columns: 50% 50%;
 }
+
+/* F */
+/* .two-percentage-row-container {
+    height: 600px;
+    grid: 30% 50% / 50% 50%;
+} */
+
+/* E === F -> true */
