@@ -12,45 +12,49 @@ body {
 }
 
 .column-gap-container {
-
+    column-gap: 10px;
 }
 
 .row-gap-container {
-
+    row-gap: 10px;
 }
 
 .both-gap-container {
-
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
 .combined-gap-container {
-
+    gap: 10px;
 }
 
 .percentage-gap-container {
-
+    gap: 10%;
 }
 
 .vw-gap-container {
-
+    gap: 10vw;
 }
 
 .vh-gap-container {
-
+    gap: 10vh;
 }
 
 .vmax-gap-container {
-
+    gap: 10vmax;
 }
 
 .vmin-gap-container {
-
+    gap: 10vmin;
 }
 
 .em-gap-container {
-
+    font-size: 20px;
+    gap: 4em;
+    /* 4 * 20 = 80px */
 }
 
 .rem-gap-container {
-
+    gap: 4rem;
+    /* 4 * 10 = 40px */
 }
