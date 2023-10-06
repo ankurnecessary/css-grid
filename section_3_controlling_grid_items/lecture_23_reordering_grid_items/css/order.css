@@ -3,34 +3,46 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-.default-container > .item:nth-of-type(3) {
-    
+.default-container>.item:nth-of-type(3) {
+    order: 0;
 }
 
-.item-one-to-last-spot-container > .item:first-of-type {
-    
+.item-one-to-last-spot-container>.item:first-of-type {
+    order: 1;
 }
 
-.last-item-to-first-spot-container > .item:last-of-type {
-    
+.item-one-to-last-spot-container>.item:first-child {
+    background-color: red;
 }
 
-.all-even-items-first-container > .item:nth-of-type(even) {
-    
+.last-item-to-first-spot-container>.item:last-of-type {
+    order: -1;
 }
 
-.jumbled-container > .item:first-of-type {
-    
+.last-item-to-first-spot-container>.item:last-child {
+    background-color: red;
 }
 
-.jumbled-container > .item:nth-of-type(2) {
-    
+.all-even-items-first-container>.item:nth-of-type(even) {
+    order: -1
 }
 
-.jumbled-container > .item:nth-of-type(3) {
-    
+.all-even-items-first-container>.item:nth-child(2n) {
+    background-color: red;
 }
 
-.jumbled-container > .item:last-of-type {
-    
+.jumbled-container>.item:first-of-type {
+    order: 2;
+}
+
+.jumbled-container>.item:nth-of-type(2) {
+    order: 1;
+}
+
+.jumbled-container>.item:nth-of-type(3) {
+    order: 3;
+}
+
+.jumbled-container>.item:last-of-type {
+    order: 0;
 }
