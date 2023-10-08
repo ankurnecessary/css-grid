@@ -1,44 +1,53 @@
-.container { 
+.container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, max-content);
 }
 
-.item-one-to-last-row-container > .item:first-of-type {
-
+.item-one-to-last-row-container>.item:first-of-type {
+    background-color: red;
+    grid-row-start: 2;
 }
 
-.item-seven-to-first-row-container > .item:nth-of-type(7) {
-
+.item-seven-to-first-row-container>.item:nth-of-type(7) {
+    background-color: red;
+    grid-row-end: 2;
 }
 
-.item-three-to-second-row-container > .item:nth-of-type(3) {
-
+.item-three-to-second-row-container>.item:nth-of-type(3) {
+    background-color: red;
+    grid-row-end: -1;
 }
 
-.item-six-to-first-row-container > .item:nth-of-type(6) {
-
+.item-six-to-first-row-container>.item:nth-of-type(6) {
+    background-color: red;
+    grid-row-start: -3;
 }
 
-.item-multiple-items-to-last-row > .item:first-of-type,
-.item-multiple-items-to-last-row > .item:nth-of-type(2) {
-
+.item-multiple-items-to-last-row>.item:first-of-type,
+.item-multiple-items-to-last-row>.item:nth-of-type(2) {
+    background-color: red;
+    grid-row-start: 2;
 }
 
-.item-multiple-items-to-first-row > .item:nth-of-type(7),
-.item-multiple-items-to-first-row > .item:nth-of-type(8) {
-
+.item-multiple-items-to-first-row>.item:nth-of-type(7),
+.item-multiple-items-to-first-row>.item:nth-of-type(8) {
+    background-color: red;
+    grid-row-start: 1;
 }
 
-.item-multiple-items-to-first-row-reordered > .item:nth-of-type(7),
-.item-multiple-items-to-first-row-reordered > .item:nth-of-type(8) {
-
+.item-multiple-items-to-first-row-reordered>.item:nth-of-type(7),
+.item-multiple-items-to-first-row-reordered>.item:nth-of-type(8) {
+    background-color: red;
+    grid-row-start: 1;
 }
 
-.item-multiple-items-to-first-row-reordered > .item:nth-of-type(8) {
-
+.item-multiple-items-to-first-row-reordered>.item:nth-of-type(8) {
+    background-color: green;
+    order: -1;
 }
 
-.item-multiple-items-to-first-row-reordered > .item:first-of-type {
-
+.item-multiple-items-to-first-row-reordered>.item:first-of-type {
+    background-color: purple;
+    order: -2;
 }
