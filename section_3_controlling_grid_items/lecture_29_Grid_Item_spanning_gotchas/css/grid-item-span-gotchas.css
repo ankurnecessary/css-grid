@@ -4,22 +4,35 @@
     grid-template-rows: repeat(2, 100px);
 }
 
-.column-start-bigger-than-end-container > .item:first-of-type {
-
+.column-start-bigger-than-end-container>.item:first-of-type {
+    background-color: red;
+    grid-column-start: 3;
+    grid-column-end: 1;
 }
 
-.row-start-bigger-than-end-container > .item:first-of-type {
-
+.row-start-bigger-than-end-container>.item:first-of-type {
+    background-color: red;
+    grid-row-start: 3;
+    grid-row-end: 1;
 }
 
-.both-values-using-span-container > .item:first-of-type {
-
+.both-values-using-span-container>.item:first-of-type {
+    background-color: red;
+    grid-column-start: span 3;
+    grid-column-end: span 2;
+    /* If we use span on both grid-column-start and grid-column-end then the declaration of grid-column-start wins. */
 }
 
-.start-span-value-is-higher-than-end-container > .item:first-of-type {
-
+.start-span-value-is-higher-than-end-container>.item:first-of-type {
+    background-color: red;
+    grid-column-start: span 3;
+    grid-column-end: 2;
+    /* If we declare grid-column-start and grid-column-end in the way above then it will not span the grid-column to 2 columns instead it will span to only one column, in which it originally sits. It is so because grid-column-end wants the grid-item to end at 2nd grid line but grid-column-start wants the grid-item to end at 3rd grid line. And the one with smaller limit alway wins. */
 }
 
-.start-span-value-is-less-than-end-container > .item:first-of-type {
-
+.start-span-value-is-less-than-end-container>.item:first-of-type {
+    background-color: red;
+    grid-column-start: span 2;
+    grid-column-end: 5;
+    /* In the CSS above we will see that grid-item will span across 2 grid columns but it will end at grid-line 5 */
 }
