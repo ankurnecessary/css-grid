@@ -3,37 +3,42 @@
 }
 
 .first-item-to-third-column-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr [thirdCol] 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
 }
 
-.first-item-to-third-column-container > .item:first-of-type {
-
+.first-item-to-third-column-container>.item:first-of-type {
+    background-color: red;
+    grid-column-start: thirdCol;
 }
 
 .third-item-to-first-column-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr [secondCol] 1fr 1fr 1fr;
     grid-template-rows: 100px 100px 100px;
 }
 
-.third-item-to-first-column-container > .item:nth-of-type(3) {
-
+.third-item-to-first-column-container>.item:nth-of-type(3) {
+    background-color: red;
+    grid-column-end: secondCol;
 }
 
 .third-item-to-third-row-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: 100px 100px [thirdRow] 100px;
 }
 
-.third-item-to-third-row-container > .item:nth-of-type(3) {
-
+.third-item-to-third-row-container>.item:nth-of-type(3) {
+    background-color: red;
+    grid-row-start: thirdRow;
 }
 
 .first-item-to-bottom-right-cell-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: 1fr 1fr 1fr [forthCol] 1fr;
+    grid-template-rows: 100px 100px [thirdRow] 100px;
 }
 
-.first-item-to-bottom-right-cell-container > .item:first-of-type {
-
+.first-item-to-bottom-right-cell-container>.item:first-of-type {
+    background-color: red;
+    grid-row-start: thirdRow;
+    grid-column-start: forthCol;
 }
